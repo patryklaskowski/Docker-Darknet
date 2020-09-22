@@ -5,7 +5,7 @@ echo -e "\n-------------------------------\n"
 dash
 
 CURR=$(pwd)
-SHARE=/Share-Folder
+SHARE=/Share
 DOCKERIMAGE=patryklaskowski/darknet:latest
 
 
