@@ -7,7 +7,8 @@ All files **exept weights** are already prepared.
 1. Download weights (```licence-plate.weights```) to your local machine  and put them into ```Docker-Darknet/Share/licence-plate``` directory. File will be reachable from within container.<br>
 ```https://drive.google.com/file/d/1AhN_UZWblCMLygPeI7qBDqv3FNnLC6YZ/view?usp=sharing```
 2. Open terminal inside container<br>
-```http://127.0.0.1:1306/terminals/1```
+![alt text](https://github.com/patryklaskowski/Docker-Darknet/blob/master/Share/utils/terminal_01.png?raw=true)
+![alt text](https://github.com/patryklaskowski/Docker-Darknet/blob/master/Share/utils/terminal_02.png?raw=true)
 3. And type in<br>
 ```
 cd /home/Share
