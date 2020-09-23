@@ -21,4 +21,4 @@ Use flag ```--img``` to point your own image. It is reccomended to use ```/Share
 Drag and drop image you want to use (```my_image.jpg```) into ```Docker-Darknet/Share``` on your local machine. File immediately should be visible inside Docker container (```http://127.0.0.1:1306/tree/Share```). To detect licence plate on this image type<br>
 ```python licence-plate-detect.py --img /home/Share/my_image.jpg```
 
-4. Detection is saved as ```/home/Share/prediction.jpg```
+4. Detection is saved as ```/home/Share/predictions.jpg``` (path in container) which is exactly same as ```Docker-Darknet/Share/predictions.jpg``` (path in local machine).
