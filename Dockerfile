@@ -15,7 +15,6 @@ WORKDIR ..
 
 RUN pip install --upgrade jupyter
 
-WORKDIR ..
 RUN echo 'jupyter notebook --no-browser --ip=0.0.0.0 --port=1306 --NotebookApp.token="password" --allow-root --notebook-dir="." > "jupyter_log.txt" 2>&1 &' > run_jupyter.sh
 RUN chmod +x run_jupyter.sh
 
