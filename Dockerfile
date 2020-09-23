@@ -6,7 +6,7 @@ RUN apt install build-essential -y --no-install-recommends
 ENV ROOT=/home
 
 WORKDIR $ROOT
-RUN git clone https://github.com/pjreddie/darknet
+RUN git clone https://github.com/AlexeyAB/darknet
 WORKDIR darknet/
 
 #RUN sed -i 's/OPENCV=0/OPENCV=1/' Makefile
