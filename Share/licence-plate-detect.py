@@ -24,14 +24,14 @@ img_path = return_flag_value('--img', args)
 paths['image'] = img_path if img_path != DEFAULT else paths['image']
 print(paths['image'])
 
-# assert os.path.isfile(paths['image']), f'** IMAGE DOES NOT EXIST ** \n{img_path}'
+assert os.path.isfile(paths['image']), f'** IMAGE DOES NOT EXIST ** \n{img_path}'
 
-# script_name = 'predict.sh'
-# with open(script_name, 'w') as f:
-#     f.write(f'./darknet/darknet detector test {paths["data"]} {paths["cfg"]} {paths["weights"]} {paths["image"]}')
+script_name = 'predict.sh'
+with open(script_name, 'w') as f:
+    f.write(f'../darknet/darknet detector test {paths["data"]} {paths["cfg"]} {paths["weights"]} {paths["image"]}')
     
-# subprocess.call(['sh', 'predict.sh'])
-# os.remove(script_name)
+subprocess.call(['sh', 'predict.sh'])
+os.remove(script_name)
 
-# if os.path.isfile('bad.list'):
-#     os.remove('bad.list')
+if os.path.isfile('bad.list'):
+    os.remove('bad.list')
