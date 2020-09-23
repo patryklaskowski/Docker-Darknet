@@ -1,7 +1,9 @@
 # Docker-Darknet
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![made-with-docker](https://img.shields.io/badge/Made%20with-Docker-1f425f.svg)](https://www.docker.com/)
-Doker with darknet architecture.
+[![made-with-jupyter](https://img.shields.io/badge/Made%20with-Jupyter-1f425f.svg)](https://jupyter.org/)
+<br>
+Doker with darknet architecture and jupyter notebook.
 
 ## 1. To run:
 ```
