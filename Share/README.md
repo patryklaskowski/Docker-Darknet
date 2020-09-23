@@ -13,4 +13,8 @@ All files **exept weight**s are already prepared.
 cd /home/Share
 python licence-plate-detect.py
 ```
+Use flag ```--img``` to point your own image. It is reccomended to use ```/Share``` folder to be able to add files inside container.<br>
+**Example**
+Drag and drop image you want to use (```my_image.jpg```) into ```Docker-Darknet/Share``` on your local machine. File immediately should be visible inside Docker container (```http://127.0.0.1:1306/tree/Share```). To detect licence plate on this image type
+```python licence-plate-detect.py --img /home/Share/my_image.jpg```
 4. Detection is saved as ```/home/Share/prediction.jpg```
