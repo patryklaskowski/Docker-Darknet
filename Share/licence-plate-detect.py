@@ -1,6 +1,8 @@
 import os
 import subprocess
 import sys
+from shutil import copyfile
+
 
 paths = dict()
 paths['data'] = '/home/Share/licence-plate/licence-plate.data'
@@ -28,9 +30,13 @@ assert os.path.isfile(paths['image']), f'** IMAGE DOES NOT EXIST ** \n{img_path}
 
 script_name = 'predict.sh'
 with open(script_name, 'w') as f:
-    f.write(f'../darknet/darknet detector test {paths["data"]} {paths["cfg"]} {paths["weights"]} {paths["image"]}')
+    f.write('cd /home/darknet\n')
+    f.write(f'./darknet detector test {paths["data"]} {paths["cfg"]} {paths["weights"]} {paths["image"]}\n')
+    f.write('cd /home/Share')
     
 subprocess.call(['sh', 'predict.sh'])
+copyfile('/home/darknet/predictions.jpg', '/home/Share/predictions.jpg')
+
 os.remove(script_name)
 
 if os.path.isfile('bad.list'):
