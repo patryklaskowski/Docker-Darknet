@@ -3,12 +3,13 @@ import subprocess
 import sys
 
 paths = dict()
-paths['data'] = '/home/licence-plate/licence-plate.data'
-paths['cfg'] = '/home/licence-plate/licence-plate.cfg'
-paths['weights'] = '/home/licence-plate/licence-plate.weights'
-paths['image'] = '/home/licence-plate/01.jpg'
+paths['data'] = '/home/Share/licence-plate/licence-plate.data'
+paths['cfg'] = '/home/Share/licence-plate/licence-plate.cfg'
+paths['weights'] = '/home/Share/licence-plate/licence-plate.weights'
+paths['image'] = '/home/Share/licence-plate/01.jpg'
 
 DEFAULT = 'default'
+
 def return_flag_value(flag, args):
     for idx, val in enumerate(args):
         if val == flag:
@@ -22,6 +23,7 @@ args = sys.argv[1:]
 img_path = return_flag_value('--img', args)
 paths['image'] = img_path if img_path != DEFAULT else paths['image']
 print(paths['image'])
+
 # assert os.path.isfile(paths['image']), f'** IMAGE DOES NOT EXIST ** \n{img_path}'
 
 # script_name = 'predict.sh'
